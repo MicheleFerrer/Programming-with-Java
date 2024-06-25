@@ -4,9 +4,8 @@ public class main{
     System.out.println("hi world");
     
 String name = "daniela";
-System.out.print("daniela is ");
 int age = 30;
-System.out.println(age);
+System.out.println("daniela is " + age);
     
 
 
