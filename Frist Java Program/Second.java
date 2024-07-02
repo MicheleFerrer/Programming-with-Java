@@ -14,16 +14,19 @@ public class Second{
 import java.util.Scanner; 
 public class Second {
     public static void main(String[] args) {
-        int x, y, sum;
+        float x, y, z, sum;
         Scanner myObj = new Scanner(System.in);
         System.out.println("Type a number:");
-        x = myObj.nextInt();
+        x = myObj.nextFloat();
 
         System.out.println("Type another number:");
-        y = myObj.nextInt();
+        y = myObj.nextFloat();
 
-        sum = x + y;
-        System.out.print("The sum of two numbers is: " + sum);
+        System.out.println("Type last number:");
+        z = myObj.nextFloat();
+
+        sum = x + y + z;
+        System.out.print("The sum of three float numbers is: " + sum);
     /*int x = 5;
     int y = 10;
     int sum = x + y;
