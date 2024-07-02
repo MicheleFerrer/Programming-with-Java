@@ -1,5 +1,5 @@
 
-public class main{
+/* public class main{
     //Declaring instance variables
     String name;
     String identity;
@@ -23,7 +23,7 @@ System.out.println(myObj.age);
 while (i < 5) {
     System.out.println(i);
     i++;
-}*/
+}
  
 
         int maxScore = 500;
@@ -32,4 +32,22 @@ while (i < 5) {
         float percentage = (float) userScore / maxScore * 100.0f;
         System.out.println("user's percentage is " + percentage);
     }
-}
+}*/
+
+
+interface StringFunction {
+    String run(String str);
+  }
+  
+  public class main {
+    public static void main(String[] args) {
+      StringFunction exclaim = (s) -> s + "!";
+      StringFunction ask = (s) -> s + "?";
+      printFormatted("Hello", exclaim);
+      printFormatted("Hello", ask);
+    }
+    public static void printFormatted(String str, StringFunction format) {
+      String result = format.run(str);
+      System.out.println(result);
+    }
+  }

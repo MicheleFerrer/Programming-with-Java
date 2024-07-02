@@ -21,7 +21,7 @@ public class Fourth extends Thread {
       System.out.println("this code is running in a thread");
      }
   }
-*/
+
 
 import java.util.ArrayList;
 import java.util.function.Consumer;
@@ -37,3 +37,20 @@ public class Fourth {
     numbers.forEach( method );
   }
 }
+  */
+
+interface StringFunction {
+  String run(String str);
+  }
+  public class Fourth {
+   public static void main(String[] args) {
+	   StringFunction exclaim = (s) -> s + "!";
+	   StringFunction ask = (s) -> s + "?";
+	   printedFormatted("Hello", exclaim);
+	   printedFormatted("Hello", ask);
+   }
+   public static void printFormatted(String str, StringFunction format) {
+    String result = format.run(str);
+    System.out.println(result);
+   }
+  }
